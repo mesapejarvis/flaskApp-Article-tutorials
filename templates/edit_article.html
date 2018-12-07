@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<div class="container">
+
+	{% from "include/_formhelpers.html" import render_field %}
+	<div class="row">
+	<div class="col-lg-2">
+		
+	</div>
+	<div class="col-lg-8">
+	<h1 class="text-center text-success">Edit Article </h1>
+		<form method="POST" action="">
+		<div class="form-group">
+			{{render_field(form.title, class_="form-control" )}}
+		</div>
+		<div class="form-group">
+			{{render_field(form.body, class_="form-control",id="editor")}}
+		</div>
+		<p> <input type="submit" value="Update" class="btn btn-success"></p>
+	</form>
+	</div class="col-lg-2">
+	<div>
+		
+	</div>
+	
+
+		
+	</div>
+</div>
+{% endblock %}

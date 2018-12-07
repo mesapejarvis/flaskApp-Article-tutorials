@@ -1,0 +1,37 @@
+ <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top navbar-default">
+      <a class="navbar-brand" href="#">FlaskApp</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/article">Article</a>
+          </li>
+        
+          
+        </ul>
+        {% if session.logged_in %}
+
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            
+             <a href="/logout"> <input type="button" value="Logout"  class="btn btn-outline-danger my-2 my-sm-0 m-3"/>   </a>
+
+        </form>
+        {% else %}
+        <form class="form-inline my-2 my-lg-0">
+             <a href="/login"><input type="button" value="Login"  class="btn btn-outline-info my-2 my-sm-0 m-3"> </a> <a href="/register"><input type="button" value="signup"  class="btn btn-outline-success my-2 my-sm-0 m-3"> </a>         
+        </form>
+        {% endif %}
+
+
+      </div>
+    </nav>

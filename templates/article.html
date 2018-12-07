@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<div class="container">
+
+ {% if session.logged_in %}
+  <a href="/dashboard">Dashboard</a>
+
+	<h1>Welcome to Article's Page</h1>
+	<p class="lead"> This application is built on python flask framework and is the focus of gainig skills in these language from scratch</p>
+
+<ul class="list-group">
+	{% for article in articles %}
+	<li class="list-group-item">
+	<h5></h5> <a href="/articles/{{article.0}}"> {{article.1}} </a>
+
+
+	 </li>
+	{% endfor %}
+</ul>
+
+
+ {% else %}
+
+ <h1>Welcome to Article's Page</h1>
+	<p class="lead"> This application is built on python flask framework and is the focus of gainig skills in these language from scratch</p>
+
+<ul class="list-group">
+	{% for article in articles %}
+	<li class="list-group-item">
+	<h5></h5> <a href="/articles/{{article.0}}"> {{article.1}} </a>
+
+
+	 </li>
+	{% endfor %}
+</ul>
+
+{% endif %}
+
+
+</div>
+
+
+
+
+{% endblock %}

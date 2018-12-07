@@ -1,0 +1,11 @@
+
+    {% extends 'layout.html' %}
+{% block body %}
+<a href="/article">Back</a>
+   <h1> {{article.1}}</h1>
+   <small class="text-primary">Written by {{article.3}} on {{article.4}}</small>
+<hr>
+<div>
+	{{article.2 | safe}}
+</div>
+{% endblock %}

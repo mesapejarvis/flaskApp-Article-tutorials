@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<div class="container">
+ <!-- {% include 'include/_messages.html' %} -->
+<div class="row">
+  
+  <div class="col-lg-2">
+    
+  </div>
+  <div class="col-lg-8">
+  <h1 class="text-center text-primary">LOGIN </h1>
+  <form method="POST" action="">
+  <div class="form-group">
+  <label>Username</label>
+    <input type="text" name="username" class="form-control" value="{{request.form.username}}">
+  </div> 
+  <div class="form-group">
+  <label>Password</label>
+    <input type="text" name="password" class="form-control" value="{{request.form.password}}">
+  </div> 
+  <button type="submit" class="btn btn-primary">Login</button>
+
+    
+  </form> 
+  </div>
+  <div class="col-lg-2">
+    
+  </div>
+</div>
+  
+</div>
+{% endblock %}
+
